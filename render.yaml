@@ -7,12 +7,12 @@ services:
     startCommand: "python src/main.py"
     envVars:
       - key: SUPABASE_URL
-        fromEnv: SUPABASE_URL
+        value: "https://abc.supabase.co"
       - key: SUPABASE_KEY
-        fromEnv: SUPABASE_KEY
+        value: "sua_chave_publica"
       - key: SUPABASE_SERVICE_KEY
-        fromEnv: SUPABASE_SERVICE_KEY
+        value: "sua_service_key"
       - key: DATABASE_URL
-        fromEnv: DATABASE_URL
+        value: "postgresql://usuario:senha@host:porta/dbname"
       - key: SECRET_KEY
-        fromEnv: SECRET_KEY
+        value: "minha_chave_supersecreta"
