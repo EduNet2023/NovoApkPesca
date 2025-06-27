@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: fishing-api
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python src/main.py"
+    envVars:
+      - key: SUPABASE_URL
+        fromEnv: SUPABASE_URL
+      - key: SUPABASE_KEY
+        fromEnv: SUPABASE_KEY
+      - key: SUPABASE_SERVICE_KEY
+        fromEnv: SUPABASE_SERVICE_KEY
+      - key: DATABASE_URL
+        fromEnv: DATABASE_URL
+      - key: SECRET_KEY
+        fromEnv: SECRET_KEY
