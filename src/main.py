@@ -117,5 +117,8 @@ if __name__ == '__main__':
     else:
         print("📁 Modo: SQLite local (dados temporários)")
     print("📊 Acesse http://localhost:5000 para testar a aplicação")
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
 
